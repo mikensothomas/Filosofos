@@ -4,7 +4,6 @@ import time
 NUM_FILOSOFOS = 5
 tempo_de_comer = 4
 tempo_de_pensar = 4
-# vezez_max = 5
 
 # A linha garfos = [threading.Semaphore(1) for _ in range(NUM_FILOSOFOS)] cria 5 garfos, um para cada filósofo.
 garfos = [threading.Semaphore(1) for _ in range(NUM_FILOSOFOS)]
