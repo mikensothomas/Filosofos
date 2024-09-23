@@ -3,6 +3,7 @@ import time
 
 NUM_FILOSOFOS = 5
 
+# A linha garfos = [threading.Semaphore(1) for _ in range(NUM_FILOSOFOS)] cria 5 garfos, um para cada filósofo.
 garfos = [threading.Semaphore(1) for _ in range(NUM_FILOSOFOS)]
 
 bloqueio = threading.Lock()
