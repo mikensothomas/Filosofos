@@ -38,18 +38,22 @@ def filosofo(posicao):
 
         garfo_esquerdo = garfos[posicao]
         garfo_direito = garfos[(posicao + 1) % NUM_FILOSOFOS]
-
         garfo_esquerdo.acquire()
         garfo_direito.acquire()
         print(f"Filósofo {posicao} pegou o garfo da esquerda (garfo {posicao}) e o garfo da direita (garfo {(posicao + 1) % NUM_FILOSOFOS})")
-
         print(f"Filósofo {posicao} está comendo.")
         time.sleep(tempo_de_comer)
 
-        print(f"Filósofo {posicao} terminou de comer e voltou a pensar.")
+        print("....................................................................................................")
+        print("\n")
 
+        print(f"Filósofo {posicao} terminou de comer e voltou a pensar.")
         garfo_esquerdo.release()
         garfo_direito.release()
+        print(f"O filósofo {posicao} largou o garfo (garfo {posicao}) e ( garfo {(posicao + 1) % NUM_FILOSOFOS})")
+
+        print("....................................................................................................")
+        print("\n")
 
         with bloqueio:
             alternar_grupo()
