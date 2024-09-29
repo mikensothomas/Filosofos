@@ -34,7 +34,7 @@ def filosofo(posicao):
             with bloqueio:
                 if posicao in grupo_comendo:
                     break
-
+           
         garfo_esquerdo = garfos[posicao]
         garfo_direito = garfos[(posicao + 1) % NUM_FILOSOFOS]
         garfo_esquerdo.acquire()
@@ -58,7 +58,6 @@ for i in range(NUM_FILOSOFOS):
     thread = threading.Thread(target=filosofo, args=(i,))
     threads.append(thread)
     thread.start()
-print("\n")
 
 for thread in threads:
     thread.join()
