@@ -27,7 +27,7 @@ def alternar_grupo():
 def filosofo(posicao):
     global grupo_comendo
     while True:
-        # print(f"Filósofo {posicao} está pensando.")
+        print(f"Filósofo {posicao} está pensando.")
         time.sleep(tempo_de_pensar)
 
         while True:
